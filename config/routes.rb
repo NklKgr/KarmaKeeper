@@ -4,4 +4,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root to: "pages#home"
+  # define routes for products and bookings nested within products
+  resources :products do
+    resources :bookings, only: [:new, :create]
+  end
 end
