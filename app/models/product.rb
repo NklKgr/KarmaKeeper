@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, through: :users
 
   validates :name, presence: true
   validates :price, presence: true, numericality: { greater_than: 0 }
