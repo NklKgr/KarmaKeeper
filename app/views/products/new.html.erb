@@ -1,26 +1,3 @@
-<div class="product-form">
-  <%= simple_form_for @product, url: products_path, method: :post do |f| %>
-    <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :overview %>
-      <%= f.text_area :overview, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :price %>
-      <%= f.text_field :price, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :unit %>
-      <%= f.text_field :unit, class: 'form-control' %>
-    </div>
-    <%= f.submit "Create Product", class: "btn btn-primary" %>
-  <% end %>
-</div>
-
-
 <%= simple_form_for @product do |f| %>
 
   <%= f.input :name %>
