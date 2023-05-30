@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :products, through: :bookings, dependent: :destroy # user is buying products through bookings
 
   devise :database_authenticatable, :registerable,
-          :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable
 end
