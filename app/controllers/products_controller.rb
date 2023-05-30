@@ -1,8 +1,4 @@
-class ProductsController < ApplicationController
-  def index
-    @products = Product.all
-  end
-
+/users/sign_up
   def show
     @product = Product.find(params[:id])
   end
@@ -13,9 +9,11 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
+    raise
     if @product.save
       puts ActiveRecord::Base.connection.to_sql # add this line to log SQL statement
-      redirect_to @product, notice: "Product was successfully created."
+      redirect_to products_path, notice: "Product was successfully created."
     else
       puts @product.errors.full_messages # add this line to log errors
       render :new

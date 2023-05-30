@@ -19,3 +19,14 @@
     <%= f.submit "Create Product", class: "btn btn-primary" %>
   <% end %>
 </div>
+
+
+<%= simple_form_for @product do |f| %>
+
+  <%= f.input :name %>
+  <%= f.input :overview %>
+  <%= f.input :price %>
+  <%= f.input :unit %>
+
+  <%= f.button :submit %>
+<% end %>

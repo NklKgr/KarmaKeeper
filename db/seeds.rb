@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+puts "Seeding Product data..."
 # Seed data for a User table
 # user = User.create!(email: "email@email.com", encrypted_password: "password",)
 Product.destroy_all
@@ -18,3 +18,4 @@ Product.create!(name: 'Luxury vacations', overview: 'Unlimited greenhouse emissi
 # Seed data for bookings table
 # Booking.create!(people_quantity: 2, duration: 3, product_id: , user_id:)
 # Booking.create!(people_quantity: 4, duration: 5, product_id: , user_id:)
+puts "Product data seeded successfully!"
