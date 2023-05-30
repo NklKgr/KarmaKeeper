@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="products-list">
+  <% @products.each do |product| %>
+    <div class="product-preview">
+      <h2><%= product.name %></h2>
+      <p><%= product.overview %></p>
+      <p><strong>Price:</strong> $<%= product.price %> per <%= product.unit %></p>
+      <%= link_to "Add to Cart", product, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
