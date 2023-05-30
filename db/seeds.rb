@@ -5,8 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create!(email: "test@bla.com", password: "123456")
-Product.create!(name: 'Private Jets', overview: 'Unlimited carbon footprint', unit: 'hours', price: 1000.00)
-Product.create!(name: 'Luxuary Cars', overview: 'Unlimited carbon emissions', unit: 'hours', price: 2000.00)
-Product.create!(name: 'Private Yachts', overview: 'Unlimited marine pollution', unit: 'hours', price: 3000.00)
-Product.create!(name: 'Luxury vacations', overview: 'Unlimited greenhouse emissions & environmental damage ', unit: 'hours', price: 5000.00)
+
+# Seed data for a User
+# user = User.create!(email: "email@email.com", encrypted_password: "password",)
+Product.destroy_all
+# # Seed data for a Product associated with the User
+Product.create!(name: 'Private Jets', overview: 'Unlimited carbon footprint', user_id: 1, price: 1000.00, unit: 'hours')
+Product.create!(name: 'Luxuary Cars', overview: 'Unlimited carbon emissions', user_id: 1, price: 2000.00, unit: 'hours')
+Product.create!(name: 'Private Yachts', overview: 'Unlimited marine pollution', user_id: 1, price: 3000.00, unit: 'hours')
+Product.create!(name: 'Luxury vacations', overview: 'Unlimited greenhouse emissions & environmental damage ', user_id: 1, price: 5000.00, unit: 'hours')
+
+# # Seed data for a Booking associated with the User and Product
+# user.bookings.create!(people_quantity: 2, duration: 3, product_id: product)

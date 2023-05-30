@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
+    <div class="col-md-9">
       <div class="card">
           <div class="card-header">
             <h3>KarmaKeeper Sign up</h3>
@@ -22,7 +22,7 @@
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
             </div>
-            <div class="form-actions">
+            <div class="form-actions mx-5 my-5">
               <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
               <br>
               <%= render "devise/shared/links" %>
