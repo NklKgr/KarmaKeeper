@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 # Seed data for a User table
 # user = User.create!(email: "email@email.com", encrypted_password: "password",)
 Product.destroy_all
