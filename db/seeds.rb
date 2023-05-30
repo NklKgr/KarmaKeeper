@@ -11,11 +11,11 @@
 Product.destroy_all
 # # # Seed data for a Product associated with the User
 Product.create!(
-  name: 'Private Jets',
-  overview: 'Unlimited carbon footprint',
+  name: 'Flying with a Private Jet',
+  overview: 'Do you ever find yourself torn between the luxurious convenience of flying on a private jet and the nagging guilt of its environmental impact? We understand your concerns and have revolutionized private air travel to align with your values. Our groundbreaking approach combines the comfort and exclusivity of a private jet with a deep commitment to environmental responsibility. With our state-of-the-art fleet, you can soar through the skies with a clear conscience. You will invested heavily in cutting-edge technology to minimize the carbon footprint and contribute for this important topic. Furthermore, we actively participate in carbon offset programs, ensuring that every flight is carbon neutral.',
   user_id: 1,
   price: 1000.00,
-  unit: 'hours'
+  unit: 'flights'
 )
 
 Product.create!(
