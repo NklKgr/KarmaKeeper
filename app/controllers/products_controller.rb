@@ -12,11 +12,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params[:product])
+    @product = Product.new(product_params)
     if @product.save
-      flash[:notice] = "Successfully created product."
-      redirect_to @product
+      puts ActiveRecord::Base.connection.to_sql # add this line to log SQL statement
+      redirect_to @product, notice: "Product was successfully created."
     else
+      puts @product.errors.full_messages # add this line to log errors
       render :new
     end
   end
@@ -24,6 +25,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :overview, :price, :unit, :user_id)
+    params.require(:product).permit(:name, :overview, :price, :unit)
   end
 end
