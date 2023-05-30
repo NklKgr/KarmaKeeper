@@ -14,14 +14,14 @@ class ProductsController < ApplicationController
   private
 
   def set_products
-    @product = Product.find_by(id: params[:id])
+    @product = Product.find(params[:id])
   end
 
   def create
     @product = Product.new(product_params)
     @product.user = current_user
-    raise
     if @product.save
+      raise
       puts ActiveRecord::Base.connection.to_sql # add this line to log SQL statement
       redirect_to products_path, notice: "Product was successfully created."
     else

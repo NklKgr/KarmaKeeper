@@ -1,21 +1,10 @@
 
 <div class="container">
-<<<<<<< HEAD
-  <div class="products-list">
-  <% @products.each do |product| %>
-    <div class="product-preview">
-      <h2><%= product.name %></h2>
-      <p><%= product.overview %></p>
-      <p><strong>Price:</strong> $<%= product.price %> per <%= product.unit %></p>
-      <%= link_to "Add to Cart", product, class: "btn btn-primary" %>
-    </div>
-=======
   <h1>Hello from index</h1>
   <% @products.each do |product| %>
     <p><%= product.name %></p>
     <p><%= product.overview %></p>
     <p><%= product.price %></p>
     <p><%= product.unit %></p>
->>>>>>> master
   <% end %>
 </div>
