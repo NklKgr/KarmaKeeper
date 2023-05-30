@@ -1,0 +1,13 @@
+<div class="m-5">
+  <% @products.each do |product| %>
+    <div class="card-product my-10">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= link_to product.name, product_path(product) %></h2>
+        <p> <%= product.overview %></p>
+        <p><strong>Unit price: <%= product.price %>€</strong></p>
+      </div>
+    </div>
+    <br>
+  <% end %>
+</div>
