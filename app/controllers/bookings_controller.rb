@@ -5,6 +5,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    # attention copilot line below, check twice when testing!!
+    @booking.product = Product.find(params[:product_id])
     if @booking.save
       redirect_to @booking
     else
@@ -15,13 +18,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:duration, :people_quantity, :product_id, :user_id)
+    params.require(:booking).permit(:amount, :people_quantity, :product_id, :user_id)
   end
 end
-
-
-# to be pasted in the view#index
-# <div data-controller="toggle" class="mt-5">
-#   <button class="btn btn-outline-primary">Add a new monument</button>
-#   <%= render "form", monument: @monument %>
-# </div>

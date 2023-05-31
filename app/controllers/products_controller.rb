@@ -5,15 +5,17 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
-  def show; end
+  def show
+    @product = Product.find(params[:id])
+    @booking = Booking.new
+  end
 
   private
 
   def set_products
-    @product = Product.find_by(id: params[:id])
+    @product = Product.find(params[:id])
   end
 
-  # Strong params: white list of sanitized input
   def product_params
     params.require(:product).permit(:name, :overview, :price, :unit)
   end

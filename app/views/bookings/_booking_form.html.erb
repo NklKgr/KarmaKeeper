@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-header">
+          <%= simple_form_for [ @product, @booking ] do |f| %>
+            <%= f.input :people_quantity, placeholder: "Enter number of people" %>
+            <%= f.input :amount, placeholder: @product.unit %>
+            <%= f.button :submit, class: "btn btn-primary rounded"%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
