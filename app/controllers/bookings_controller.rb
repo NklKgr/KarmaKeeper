@@ -6,10 +6,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    # attention copilot line below, check twice when testing!!
     @booking.product = Product.find(params[:product_id])
-    if @booking.save
-      redirect_to @booking
+    if @booking.save!
+      redirect_to products_path
     else
       render 'new'
     end
