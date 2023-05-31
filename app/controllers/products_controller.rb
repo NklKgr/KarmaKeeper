@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def show; end
-
+  
   private
 
   def set_products
