@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :bookings, only: [:new, :create]
   end
+
+  get "/search", to: "products#search"
 end

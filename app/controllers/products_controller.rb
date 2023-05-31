@@ -26,6 +26,15 @@ class ProductsController < ApplicationController
     end
   end
 
+  def search
+    if params[:search].blank?
+      redirect_to products_path and return
+    else
+      @parameter = params[:search].downcase
+      @results = Products.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
+    end
+  end
+
   private
 
   def set_products
