@@ -3,11 +3,27 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @product = Product.new
   end
 
   def show
     @product = Product.find(params[:id])
     @booking = Booking.new
+  end
+
+  def new
+    @product = Product.new
+  end
+
+  def create
+    @product = Product.new(product_params)
+    @product.user = current_user
+    if @product.save
+      redirect_to products_path, notice: "Product was successfully created."
+    else
+      puts @product.errors.full_messages
+      render :new
+    end
   end
 
   private

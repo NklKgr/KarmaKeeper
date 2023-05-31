@@ -1,10 +1,14 @@
+<%= render "layouts/index_card" %>
 
-<div class="container">
-  <h1>Hello from index</h1>
-  <% @products.each do |product| %>
-    <p><%= product.name %></p>
-    <p><%= product.overview %></p>
-    <p><%= product.price %></p>
-    <p><%= product.unit %></p>
-  <% end %>
-</div>
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <%= render "products/form", { product: @product } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <%= link_to "+ Add a new Product", "#", class: "btn btn-lg btn-info link-dark border border-white shadow-lg ", data: { bs_target: '#exampleModal', bs_toggle: 'modal' } %>
+  </div>
