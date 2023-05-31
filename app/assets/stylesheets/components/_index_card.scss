@@ -1,3 +1,4 @@
+
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -5,6 +6,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 10px !important;
 }
 
 .card-product img {
@@ -29,4 +31,13 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
