@@ -1,7 +1,7 @@
 <div class="m-5 mb-0">
   <% @products.each do |product| %>
     <div class="card-product">
-      <%= cl_image_tag product.photo.key  if product.photo.attached? %>
+      <%= cl_image_tag product.photo.key if product.photo.attached? %>
       <div class="card-product-infos">
         <div class ="truncate">
           <h2><%= link_to product.name, product_path(product) %></h2>

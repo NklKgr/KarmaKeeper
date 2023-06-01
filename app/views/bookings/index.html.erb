@@ -9,10 +9,10 @@
       <div class="col-sm col-lg-2"></div>
     <div class="col-sm col-lg-8 mt-2 mb-2">
     <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <%= cl_image_tag booking.product.photo.key if booking.product.photo.attached? %>
     <div class="card-product-infos">
       <div class="truncate">
-        <h2><%= link_to booking.product.name %></h2>
+        <h2><%= booking.product.name %></h2>
         <p> <%= booking.product.overview %></p>
       </div>
       <div>
