@@ -1,0 +1,10 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Your shopping Cart</h1>
+  </div>
+</div>
+<div class="container w-50 bg-light p-3">
+  <% @bookings.each do | booking | %>
+    <p><%= booking.product.name %></p>
+  <% end %>
+</div>
