@@ -4,10 +4,21 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @product = Product.new
+
+    query = params[:query]
+    if query.present?
+      sql_query = "name ILIKE :query OR overview ILIKE :query"
+      @products = @products.where(sql_query, query: "%#{params[:query]}%")
+    end
+
+    # if params[:year].present?
+    #   @products = @products.where(year: params[:year])
+    # end
   end
 
   def show
-    @product = Product.new
+    @product = Product.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -20,7 +31,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to products_path, notice: "Product was successfully created."
     else
-      puts @product.errors.full_messages # add this line to log errors
+      puts @product.errors.full_messages
       render :new
     end
   end
@@ -28,11 +39,10 @@ class ProductsController < ApplicationController
   private
 
   def set_products
-    @product = Product.find_by(id: params[:id])
+    @product = Product.find(params[:id])
   end
 
-  # Strong params: white list of sanitized input
   def product_params
-    params.require(:product).permit(:name, :overview, :price, :unit)
+    params.require(:product).permit(:name, :overview, :price, :unit, :photo)
   end
 end

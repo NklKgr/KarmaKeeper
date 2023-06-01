@@ -3,5 +3,5 @@ class Booking < ApplicationRecord
   belongs_to :user
 
   validates :people_quantity, numericality: true
-  validates :duration, presence: true
+  validates :amount, presence: true
 end

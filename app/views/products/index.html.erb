@@ -1,3 +1,4 @@
+<%= render "layouts/searchbar" %>
 <%= render "layouts/index_card" %>
 
 <!-- Modal -->
@@ -9,6 +10,8 @@
     </div>
   </div>
 
-  <div class="container text-center">
+<% if user_signed_in? %>
+  <div class="container text-center mb-5">
     <%= link_to "+ Add a new Product", "#", class: "btn btn-lg btn-info link-dark border border-white shadow-lg ", data: { bs_target: '#exampleModal', bs_toggle: 'modal' } %>
   </div>
+<% end %>
