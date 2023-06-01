@@ -29,7 +29,6 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
-
 file = URI.open("https://res.cloudinary.com/dbwoguxxf/image/upload/v1685611728/images%20project/boat_xloznj.jpg")
 product = Product.create!(
   name: 'Cruise Ship Vacations',
@@ -41,7 +40,6 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
-
 file = URI.open("https://res.cloudinary.com/dbwoguxxf/image/upload/v1685611728/images%20project/waste_yo02u7.jpg")
 product = Product.create!(
   name: 'Forgot about waste separation?',
@@ -52,7 +50,6 @@ product = Product.create!(
 )
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
-
 
 file = URI.open("https://res.cloudinary.com/dbwoguxxf/image/upload/v1685611727/images%20project/tank_wyw1sk.jpg")
 product = Product.create!(
