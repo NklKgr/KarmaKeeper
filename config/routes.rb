@@ -9,4 +9,4 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[new create]
   end
   resources :bookings, only: :index
-  get "/search", to: "products#search"
+end
