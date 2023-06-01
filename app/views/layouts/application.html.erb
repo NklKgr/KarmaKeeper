@@ -17,11 +17,13 @@
     <div class="wave"></div>
     <div class="wave"></div>
   </div>
-    <%= render "layouts/navbar" %>
+  <div class="page-container">
+  <%= render "layouts/navbar" %>
 
-    <%= yield %>
+    <div><%= yield %></div>
+    <%= render "layouts/footer" %>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "layouts/footer" %>
   </body>
 </html>
