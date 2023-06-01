@@ -10,3 +10,4 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: :index
   get "/search", to: "products#search"
+end
