@@ -1,17 +1,15 @@
-<div class="m-5">
-  <% @products.each do |product| %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <div class ="truncate">
-          <h2><%= link_to product.name, product_path(product) %></h2>
-          <p> <%= product.overview %></p>
-        </div>
-        <div>
-          <p><strong>Unit price: <%= product.price %>€</strong></p>
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @products.each do |product| %>
+      <div class="col">
+        <div class="card rounded-4 overflow-hidden shadow mb-5 bg-white rounded">
+          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2062&q=80" class="card-img-top" alt="...">
+          <div class="card-body h-25">
+            <h5 class="card-title text-truncate"><strong><%= product.name %></strong></h5>
+            <p class="card-text text-truncate"><%= product.overview %></p>
+          </div>
         </div>
       </div>
-    </div>
-    <br>
-  <% end %>
+    <% end %>
+  </div>
 </div>
