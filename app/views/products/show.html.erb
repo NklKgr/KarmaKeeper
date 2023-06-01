@@ -1,4 +1,6 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+
+
+<div class="banner background-div" style="background: url('<%= cl_image_path(@product.photo.key) %>') no-repeat center center fixed; background-size: cover; object-position: center;">
   <div class="container">
     <h1><%= @product.name %></h1>
     <p class="color-white mt-2 fs-6">STARTING FROM <%= @product.price %>$</p>
