@@ -2,13 +2,18 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <% @products.each do |product| %>
       <div class="col">
-        <div class="card rounded-4 overflow-hidden shadow mb-5 bg-white rounded">
-          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2062&q=80" class="card-img-top" alt="...">
-          <div class="card-body h-25">
-            <h5 class="card-title text-truncate"><strong><%= product.name %></strong></h5>
-            <p class="card-text text-truncate"><%= product.overview %></p>
+          <div class="card rounded-4 overflow-hidden shadow mb-5 bg-white rounded">
+        <%= link_to product_path(product), class: "stretched-link text-decoration-none" do %>
+            <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2062&q=80" class="card-img-top" alt="...">
+            <div class="card-body h-25">
+              <h5 class="card-title text-truncate"><strong><%= product.name %></strong></h5>
+              <p class="card-text text-truncate"><%= product.overview %></p>
+              <div class="row justify-content-between">
+                <p class="col text-right">Unit price: <%= product.price %> €</p>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>
