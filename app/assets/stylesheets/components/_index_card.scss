@@ -18,14 +18,19 @@
   display: flex;
   align-items: center;
   border-radius: 10px !important;
-  margin-left: 120px;
-  margin-right: 120px;
+  max-width: 800px;
+  width: 100%;
 }
 
 .card-product img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+}
+.card-product {
+  .btn {
+    transform: translate(-1px, 1px) scale(.9);
+  }
 }
 
 .card-product h2 {
