@@ -3,10 +3,9 @@
     <h1>Your shopping Cart</h1>
   </div>
 </div>
-  <div class="container mt-5 mb-3">
+  <div class="container mt-5 mb-5">
   <% @bookings.each do | booking | %>
   <div class="row">
-      <div class="col-sm col-lg-2"></div>
     <div class="col-sm col-lg-8 mt-2 mb-2">
     <div class="card-product">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
@@ -17,31 +16,23 @@
       </div>
       <div>
         <p><strong>Unit price: <%= booking.product.price %>€</strong></p>
-        </div>
+      </div>
       </div>
     </div>
     </div>
-  </div>
-        <div class="col-sm col-lg-2"></div>
-
-<% end %>
-</div>
-<div class="container mb-5">
-  <div class="row">
-    <div class="col-sm col-lg-4"></div>
-    <div class="col-sm col-lg-4 ">
-      <% sum = 0 %>
+  <% end %>
+  <div class="col-sm col-lg-4">
+  <% sum = 0 %>
       <% @bookings.each do | booking | %>
       <% sum += booking.product.price %>
       <% end %>
-      <p class="fs-4 text-center m-0 p-3 text-white bg-primary"><strong>Your total amount: <%= sum %></strong>
+      <p class="fs-4 text-center m-0 p-3 text-white bg-primary"><strong>Your total amount: <%= sum %>$</strong>
       </p>
       <span><%= link_to '<i class="fa-solid fa-cart-shopping"></i> Book now'.html_safe, products_path, class: "btn btn-light btn-lg w-100", data: { bs_target: '#successModal', bs_toggle: 'modal' } %></span>
     </div>
-    <div class="col-sm col-lg-4"></div>
+  </div>
   </div>
 </div>
-
 
 <!-- Modal Success -->
 <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
