@@ -1,7 +1,7 @@
-<%= simple_form_for @product, html: { multipart: true } do |f| %>
+<%= simple_form_for @product, class: "rounded-bar", html: { multipart: true } do |f| %>
   <%= f.input :name %>
   <%= f.input :overview %>
   <%= f.input :price %>
   <%= f.input :unit %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "rounded-bar" %>
 <% end %>
