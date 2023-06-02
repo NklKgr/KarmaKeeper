@@ -16,6 +16,7 @@
       </div>
       <div>
         <p><strong>Unit price: <%= booking.product.price %>€</strong></p>
+        <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
       </div>
       </div>
     </div>

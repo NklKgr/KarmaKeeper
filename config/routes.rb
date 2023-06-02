@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :bookings, only: %i[new create]
   end
-  resources :bookings, only: :index
+  resources :bookings, only: %i[index destroy]
   get "/search", to: "products#search"
 end
