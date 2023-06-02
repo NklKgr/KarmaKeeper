@@ -18,7 +18,7 @@ user = User.create!(
   last_name: "Mustermann"
 )
 
-file = URI.open("https://res.cloudinary.com/dbwoguxxf/image/upload/v1685611728/images%20project/aircraft_v6ceu8.jpg")
+file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685623528/aircraft_v6ceu8_nv4ixr.jpg")
 product = Product.create!(
   name: 'Flying with a Private Jet',
   overview: 'Do you ever find yourself torn between the luxurious convenience of flying on a private jet and the nagging guilt of its environmental impact? We understand your concerns and have revolutionized private air travel to align with your values. Our groundbreaking approach combines the comfort and exclusivity of a private jet with a deep commitment to environmental responsibility. With our state-of-the-art fleet, you can soar through the skies with a clear conscience. You will invested heavily in cutting-edge technology to minimize the carbon footprint and contribute for this important topic. Furthermore, we actively participate in carbon offset programs, ensuring that every flight is carbon neutral.',
@@ -29,7 +29,7 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
-file = URI.open("https://res.cloudinary.com/dbwoguxxf/image/upload/v1685611728/images%20project/boat_xloznj.jpg")
+file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685623528/boat_xloznj_ibdpu5.jpg")
 product = Product.create!(
   name: 'Cruise Ship Vacations',
   overview: "Embark on a journey of self-discovery and conscious exploration with our groundbreaking Ethical Cruise solution. We understand that in today's world, concerns about sustainability and environmental impact weigh heavily on the minds of travelers. That's why we have created a guilt-free cruising experience that allows you to indulge in the joys of travel while making a positive difference.",
@@ -40,7 +40,8 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
-file = URI.open("https://res.cloudinary.com/dbwoguxxf/image/upload/v1685611728/images%20project/waste_yo02u7.jpg")
+
+file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685623528/waste_yo02u7_loy2ni.jpg")
 product = Product.create!(
   name: 'Forgot about waste separation?',
   overview: 'Are you tired of feeling guilty every time you throw away your garbage without separating it properly? Do you wish there was a convenient way to making a positive impact on the environment? We understand that life can get busy, and you may not always have the time or energy to research waste separation guidelines. And with this product you will contribute to a responsible and eco-conscious environment.',
@@ -51,7 +52,7 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
-file = URI.open("https://res.cloudinary.com/dbwoguxxf/image/upload/v1685611727/images%20project/tank_wyw1sk.jpg")
+file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685623528/tank_wyw1sk_irpqne.jpg")
 product = Product.create!(
   name: 'Buying a Tank',
   overview: "We understand that in an ever-changing world, it's important to consider the impact of our choices. That's why we've created this revolutionary product, designed to address the guilt associated with purchasing military-tank vehicle while promoting a sustainable future for our planet.  With a commitment to environmental responsibility, you’ll invest in cutting-edge technology and innovative engineering that helps reduce carbon print around the world.",
