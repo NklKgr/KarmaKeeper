@@ -1,4 +1,4 @@
-<div class="container p-3">
+<div class="container rounded-bar p-3">
   <h2 class="pb-2 h4">Create a new Produkt</h2>
   <%= simple_form_for product, html: { multipart: true } do |f| %>
     <%= f.input :name %>
@@ -6,6 +6,6 @@
     <%= f.input :price %>
     <%= f.input :unit, collection: ["hours", "days", "weeks", "months", "flights", "cruise days"], prompt: "Select a unit" %>
     <%= f.input :photo, as: :file %>
-    <%= f.button :submit, "Create a new Product", class: "btn btn-lg btn-primary mt-2 w-100"%>
+    <%= f.button :submit, "Create a new Product", class: "btn btn-lg rounded-bar btn-primary mt-2 w-100"%>
   <% end %>
 </div>

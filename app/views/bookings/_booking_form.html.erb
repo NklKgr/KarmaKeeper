@@ -2,7 +2,7 @@
         <div class="book-product w-100 p-3 ps-5 pe-5">
           <%= simple_form_for [ @product, @booking ] do |f| %>
             <%= f.input :people_quantity, placeholder: "Enter number of people" %>
-            <%= f.input :amount, placeholder: @product.unit %>
-            <%= f.button :submit, "Add to Cart", class: "btn btn-primary rounded w-100"%>
+            <%= f.input :amount, class: "rounded-bar", placeholder: @product.unit %>
+            <%= f.button :submit, "Add to Cart", class: "btn btn-primary rounded-bar w-100"%>
           <% end %>
         </div>
