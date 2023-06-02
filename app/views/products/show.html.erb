@@ -13,16 +13,18 @@
 <div class="container mt-5 mb-5 ">
   <div class="row m-0">
     <div class="col-8">
-      <div class="container p-5 shadow-lg rounded bg-white">
+      <div class="container p-5 shadow-lg rounded bg-color">
         <p class="h5 lh-base"><%= @product.overview %></p>
       </div>
     </div>
 
-    <div class="col-4 d-flex align-items-center justify-content-center bg-light p-0">
+    <div class="col-4 d-flex align-items-center justify-content-center bg-color p-0">
       <%= render 'bookings/booking_form' %>
     </div>
   </div>
 </div>
 <div class="container mx-auto text-center">
-<%= link_to '<i class="fa-solid fa-arrow-left"></i> Back to products'.html_safe, bookings_path, class: "btn btn-primary shadow" %>
+<%= link_to '<i class="fa-solid fa-arrow-left"></i> Back to products'.html_safe, bookings_path, id: "schadow-button", class: "btn btn-primary" %>
 </div>
+<br>
+<br>
