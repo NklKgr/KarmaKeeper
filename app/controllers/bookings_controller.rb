@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.product = Product.find(params[:product_id])
     if @booking.save!
-      redirect_to products_path
+      redirect_to bookings_path
     else
       render 'new'
     end
