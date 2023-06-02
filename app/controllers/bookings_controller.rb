@@ -12,10 +12,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.product = Product.find(params[:product_id])
-    if @booking.save!
+    if @booking.save
       redirect_to bookings_path
     else
-      render 'new'
+      redirect_to products_path, notice: "Booking was not successfully created."
     end
   end
 
@@ -28,6 +28,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:amount, :people_quantity, :product_id, :user_id)
+    params.require(:booking).permit(:amount, :people_quantity)
   end
 end

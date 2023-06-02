@@ -11,9 +11,6 @@ class ProductsController < ApplicationController
       @products = @products.where(sql_query, query: "%#{params[:query]}%")
     end
 
-    # if params[:year].present?
-    #   @products = @products.where(year: params[:year])
-    # end
   end
 
   def show
