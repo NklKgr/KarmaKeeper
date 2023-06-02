@@ -3,7 +3,7 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <% @products.each do |product| %>
       <div class="col">
-        <div class="card img-product rounded-4 overflow-hidden shadow mb-5 bg-color rounded">
+        <div class="card img-product rounded-4 overflow-hidden shadow mb-5 bg-white rounded">
           <%= link_to product_path(product) do %>
             <%= cl_image_tag product.photo.key if product.photo.attached? %>
             <div class="card-body text h-25">
