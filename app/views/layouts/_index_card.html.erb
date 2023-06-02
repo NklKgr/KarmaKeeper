@@ -1,4 +1,4 @@
-<div class="m-5 mb-0">
+<div class="m-5 mx-auto">
   <% @products.each do |product| %>
     <div class="card-product">
       <%= cl_image_tag product.photo.key if product.photo.attached? %>
