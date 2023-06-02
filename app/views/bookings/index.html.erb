@@ -26,9 +26,11 @@
       <% @bookings.each do | booking | %>
       <% sum += booking.product.price %>
       <% end %>
-      <p class="fs-4 text-center m-0 p-3 text-white bg-primary"><strong>Your total amount: <%= sum %>$</strong>
-      </p>
-      <span><%= link_to '<i class="fa-solid fa-cart-shopping"></i> Book now'.html_safe, products_path, class: "btn btn-light btn-lg w-100", data: { bs_target: '#successModal', bs_toggle: 'modal' } %></span>
+      <div class="">
+        <p class="fs-4 text-center m-0 p-3 text-white bg-primary tot-amount-rounded"><strong>Your total amount: <%= sum %>$</strong>
+        </p>
+        <span><%= link_to '<i class="fa-solid fa-cart-shopping"></i> Book now'.html_safe, products_path, class: "btn btn-light btn-lg w-100 book-button-rounded", data: { bs_target: '#successModal', bs_toggle: 'modal' } %></span>
+      </div>
     </div>
   </div>
   </div>
