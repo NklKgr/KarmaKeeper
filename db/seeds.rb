@@ -29,7 +29,6 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
-
 file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685623528/boat_xloznj_ibdpu5.jpg")
 product = Product.create!(
   name: 'Cruise Ship Vacations',
@@ -52,7 +51,6 @@ product = Product.create!(
 )
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
-
 
 file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685623528/tank_wyw1sk_irpqne.jpg")
 product = Product.create!(
