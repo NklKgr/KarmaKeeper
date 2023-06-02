@@ -107,5 +107,6 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
+
 # # Seed data for a Booking associated with the User and Product
 # user.bookings.create!(people_quantity: 2, duration: 3, product_id: product)
