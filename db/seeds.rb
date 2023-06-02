@@ -55,7 +55,7 @@ product.save
 file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685623528/tank_wyw1sk_irpqne.jpg")
 product = Product.create!(
   name: 'Buying a Tank',
-  overview: "We understand that in an ever-changing world, it's important to consider the impact of our choices. That's why we've created this revolutionary product, designed to address the guilt associated with purchasing military-tank vehicle while promoting a sustainable future for our planet.  With a commitment to environmental responsibility, you’ll invest in cutting-edge technology and innovative engineering that helps reduce carbon print around the world.",
+  overview: "We understand that in an ever-changing world, it's important to consider the impact of our choices. That's why we've created this revolutionary product, designed to address the guilt associated with purchasing military-tank vehicle while promoting a sustainable future for our planet.  With a commitment to environmental responsibility, you'll invest in cutting-edge technology and innovative engineering that helps reduce carbon print around the world.",
   user_id: user.id,
   price: 5000.00,
   unit: 'weeks'
