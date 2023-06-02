@@ -10,7 +10,6 @@
   color: black;
 }
 
-
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -54,4 +53,23 @@
   -webkit-line-clamp: 2; /* number of lines to show */
           line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+=======
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+// CARD_color
+.bg-color {
+  background-color: #F0EBCE;
+}
+
+#schadow-button {
+  box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.56);
 }
