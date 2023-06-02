@@ -1,4 +1,6 @@
-<div class="banner background-div" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('<%= cl_image_path(@product.photo.key) %>') no-repeat center center fixed; background-size: cover; object-position: center;">
+<% if @product.photo.attached? %>
+  <div class="banner background-div" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('<%= cl_image_path(@product.photo.key) %>') no-repeat center center fixed; background-size: cover; object-position: center;">
+<% end %>
   <div class="container">
     <h1><%= @product.name %></h1>
     <p class="color-white mt-2 fs-6 ">STARTING FROM <%= @product.price %>$ per <%= @product.unit %></p>
