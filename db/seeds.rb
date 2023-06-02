@@ -96,5 +96,16 @@ product = Product.create!(
 product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 product.save
 
+file = URI.open("https://res.cloudinary.com/dvje7oyen/image/upload/v1685696847/hot-air-balloon-3648832_1280_km5all.jpg")
+product = Product.create!(
+  name: 'Hot Air Balloon ride',
+  overview: "Are you enchanted by the idea of floating through the sky in a hot air balloon but find yourself burdened with feelings of guilt about its environmental impact? We understand your concern, and we're thrilled to introduce the ultimate solution for guilt-free aerial adventures. With EthicalEscape, you can embark on an unforgettable hot air balloon experience, knowing that your journey is designed with the utmost care for the environment. Join your guilt-free journey, where adventure and environmental responsibility go hand in hand. ",
+  user_id: user.id,
+  price: 550,
+  unit: 'days'
+)
+product.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+product.save
+
 # # Seed data for a Booking associated with the User and Product
 # user.bookings.create!(people_quantity: 2, duration: 3, product_id: product)
