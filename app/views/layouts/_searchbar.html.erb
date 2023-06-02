@@ -1,29 +1,11 @@
-<%#
-<div class="container mt-2">
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-9">
-      <div class="d-flex justify-content-center px-1">
-        <div class="search">
-          <%# form_with url: products_path, method: :get, class: "d-flex" do %>
-            <%# text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Find a product"
-            %>
-            <%# <a href="#" class="search-icon">
-              <i class="fa fa-search"></i>
-            </a> %>
-          <%# end %>
-        <%# </div>
-        <div class="col-md-2">
-        </div>
-      </div>
-    </div>
-</div> %>
-
 <div class="container mt-5">
+<<<<<<< HEAD
   <div class="px-10 rounded field">
     <%= form_with url: products_path, method: :get, class: "d-flex rounded-field" do %>
+=======
+  <div class="px-10 rounded-4">
+    <%= form_with url: products_path, method: :get, class: "d-flex" do %>
+>>>>>>> master
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",

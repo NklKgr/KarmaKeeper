@@ -1,14 +1,12 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top shadow">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?w=1800&t=st=1685450270~exp=1685450870~hmac=d496c63a9719c7f4e30fe661e471258bba28f8d3fdd5ecdf07c787125db94af5" %>
+      <p class="m-0 fs-2">Ethical<strong class="text-primary">Escape</strong></p>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <p class="fs-2 m-0 position-absolute top-50 start-50 translate-middle">Ethical<strong class="text-primary">Escape</strong></p>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
@@ -17,7 +15,7 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Shopping Cart", "#", class: "nav-link" %>
+            <%= link_to "Shopping Cart", bookings_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://media.istockphoto.com/id/1345002600/de/vektor/geschlechtsneutraler-profil-avatar-frontansicht-eines-anonymen-personengesichts.jpg?s=1024x1024&w=is&k=20&c=EffilvAau-TRXNofgoFJBG66tVFMKWTqhTqiAfWu4gY=", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

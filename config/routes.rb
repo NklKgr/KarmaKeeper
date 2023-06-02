@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   root to: "products#index"
   # define routes for products and bookings nested within products
   resources :products do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: %i[new create]
   end
-
+  resources :bookings, only: :index
   get "/search", to: "products#search"
 end

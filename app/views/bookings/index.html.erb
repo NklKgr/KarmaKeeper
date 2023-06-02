@@ -1,0 +1,52 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Your shopping Cart</h1>
+  </div>
+</div>
+  <div class="container mt-5 mb-5">
+  <% @bookings.each do | booking | %>
+  <div class="row">
+    <div class="col-sm col-lg-8 mt-2 mb-2">
+    <div class="card-product">
+    <%= cl_image_tag booking.product.photo.key if booking.product.photo.attached? %>
+    <div class="card-product-infos">
+      <div class="truncate">
+        <h2><%= booking.product.name %></h2>
+        <p> <%= booking.product.overview %></p>
+      </div>
+      <div>
+        <p><strong>Unit price: <%= booking.product.price %>€</strong></p>
+      </div>
+      </div>
+    </div>
+    </div>
+  <% end %>
+  <div class="col-sm col-lg-4">
+  <% sum = 0 %>
+      <% @bookings.each do | booking | %>
+      <% sum += booking.product.price %>
+      <% end %>
+      <p class="fs-4 text-center m-0 p-3 text-white bg-primary"><strong>Your total amount: <%= sum %>$</strong>
+      </p>
+      <span><%= link_to '<i class="fa-solid fa-cart-shopping"></i> Book now'.html_safe, products_path, class: "btn btn-light btn-lg w-100", data: { bs_target: '#successModal', bs_toggle: 'modal' } %></span>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Modal Success -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-success">
+      <div class="modal-header border-0 mx-auto font-weight-bold">
+        <h3 class="h2 modal-title font-weight-bold text-center" id="exampleModalLongTitle">Booking confirmed! 🥳</h5>
+      </div>
+      <div class="modal-body">
+        <p class="text-center m-0 fs-4">Thank you for your booking.</p>
+      </div>
+      <div class="modal-footer mx-auto border-0">
+        <%= link_to "Back to Products", products_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
